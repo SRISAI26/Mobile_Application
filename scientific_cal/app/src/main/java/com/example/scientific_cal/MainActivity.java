@@ -124,6 +124,101 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(result);
             }
         });
+        Mod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                operation.push('%');
+
+                if(c == 1)
+                {
+                    result  = result + v;
+                }
+                else
+                {
+                    result = result % v;
+
+                }
+                c = 0;
+                System.out.println(result);
+            }
+        });
+
+
+        Sin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 double v = Double.parseDouble(value.getText().toString());
+                double f = Math.sin(Math.toRadians(v));
+                value.setText(Double.toString(f));
+
+
+            }
+        });
+        Cos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                double f = Math.cos(Math.toRadians(v));
+                value.setText(Double.toString(f));
+
+            }
+        });
+        Tan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                double f = Math.tan(Math.toRadians(v));
+                value.setText(Double.toString(f));
+
+            }
+        });
+        Log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                double f = Math.log10(v);
+                value.setText(Double.toString(f));
+
+            }
+        });
+        Lan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                double f = Math.log(v);
+                value.setText(Double.toString(f));
+
+            }
+        });
+        Sqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                double f = Math.sqrt(v);
+                value.setText(Double.toString(f));
+
+            }
+        });
+        Pow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int v = Integer.parseInt(value.getText().toString());
+                value.setText("");
+                result += v;
+                operation.push('p');
+
+
+
+            }
+        });
+
 
 
         Equal.setOnClickListener(new View.OnClickListener() {
@@ -161,6 +256,7 @@ public class MainActivity extends AppCompatActivity {
                         v = Integer.parseInt(value.getText().toString());
                         result =  result / v;
                         value.setText(Integer.toString(result));
+
                         result = 0;
                         operation.clear();
                         c = 1;
@@ -172,6 +268,14 @@ public class MainActivity extends AppCompatActivity {
                         value.setText(Integer.toString(result));
                         result = 0;
                         operation.clear();
+                        break;
+                    case 'p':
+                         v = Integer.parseInt(value.getText().toString());
+                        double f = Math.pow(result,v);
+                        int t =  (int) f;
+                        value.setText(Integer.toString(t));
+                        operation.clear();
+                        result = 0;
                         break;
 
 
