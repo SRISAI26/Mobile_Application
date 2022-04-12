@@ -82,7 +82,7 @@
         android:layout_marginTop="37dp"
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="271dp"
-        android:text="@string/validate"
+        android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

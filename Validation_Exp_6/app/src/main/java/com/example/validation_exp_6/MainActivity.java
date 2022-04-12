@@ -2,6 +2,7 @@ package com.example.validation_exp_6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
                  if(un.matches("[a-zA-Z]+") && pwd.length() == 4 && pwd.matches("[0-9]+"))
                  {
-                     Toast.makeText(getApplicationContext(),"Successful",Toast.LENGTH_LONG).show();
+                     //Toast.makeText(getApplicationContext(),"Successful",Toast.LENGTH_LONG).show();
                      firstvalue.setText("");
                      secondvalue.setText("");
-
+                     Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                     startActivity(intent);
                  }
                  else if(un.length() == 0 || pwd.length() == 0)
                  {
