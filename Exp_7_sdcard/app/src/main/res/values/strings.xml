@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Exp_7_sdcard</string>
+    <string name="filename">FileName</string>
+    <string name="name">Name</string>
+    <string name="studentname">StudentName</string>
+    <string name="cgpa">CGPA</string>
+    <string name="write_data">WRITE DATA</string>
+    <string name="read_data">READ DATA</string>
+</resources>
